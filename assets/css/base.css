@@ -1,0 +1,283 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Base styles */
+body {
+background-color: #050505;
+color: #FFFFFF;
+font-family: 'Montserrat', sans-serif;
+overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif, .font-title {
+font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.font-sans {
+font-family: 'Montserrat', sans-serif !important;
+}
+/* Dark section glass card */
+.glass-card-dark {
+background: linear-gradient(135deg, rgba(30, 30, 32, 0.72) 0%, rgba(20, 20, 22, 0.85) 100%);
+border: 1px solid rgba(156, 163, 175, 0.22);
+box-shadow:
+0 30px 70px rgba(0, 0, 0, 0.8),
+inset 0 1px 0 rgba(255, 255, 255, 0.05),
+0 0 40px rgba(156, 163, 175, 0.05);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+transition: border-color 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+}
+.glass-card-dark:hover {
+border-color: rgba(156, 163, 175, 0.45);
+box-shadow:
+0 30px 70px rgba(0, 0, 0, 0.9),
+inset 0 1px 0 rgba(255, 255, 255, 0.1),
+0 0 50px rgba(156, 163, 175, 0.12);
+}
+
+/* Light section glass card */
+.glass-card-light {
+background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 250, 252, 0.95) 100%);
+border: 1px solid rgba(203, 213, 225, 0.85);
+box-shadow:
+0 12px 35px rgba(0, 0, 0, 0.04),
+inset 0 1px 0 rgba(255, 255, 255, 1),
+0 0 20px rgba(0, 0, 0, 0.02);
+backdrop-filter: blur(24px);
+-webkit-backdrop-filter: blur(24px);
+transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-light:hover {
+border-color: rgba(100, 116, 139, 0.6);
+box-shadow:
+0 25px 50px rgba(0, 0, 0, 0.09),
+inset 0 1px 0 rgba(255, 255, 255, 1),
+0 0 35px rgba(0, 0, 0, 0.04);
+}
+
+/* Luxury Dark Button for Light Sections */
+.btn-luxury-dark {
+position: relative;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 0.6rem;
+background: linear-gradient(135deg, #18181B 0%, #09090B 100%);
+color: #FFFFFF !important;
+font-weight: 700;
+font-size: 11px;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+padding: 1rem 2rem;
+border: 1px solid rgba(24, 24, 27, 0.85);
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
+overflow: hidden;
+transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+cursor: pointer;
+text-decoration: none;
+border-radius: 3px;
+}
+
+.btn-luxury-dark::before {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+transition: all 0.6s ease;
+}
+
+.btn-luxury-dark:hover {
+transform: translateY(-3px) scale(1.02);
+background: #000000;
+box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+color: #FFFFFF !important;
+}
+
+.btn-luxury-dark:hover::before {
+left: 100%;
+}
+/* Ambient glow components */
+.ambient-glow {
+position: absolute;
+border-radius: 50%;
+pointer-events: none;
+mix-blend-mode: screen;
+filter: blur(120px);
+opacity: 0.4;
+}
+/* Custom scrollbar */
+::-webkit-scrollbar {
+width: 6px;
+}
+::-webkit-scrollbar-track {
+background: #1C1C1E;
+}
+::-webkit-scrollbar-thumb {
+background: #9CA3AF;
+border-radius: 10px;
+}
+/* Reveal mask utilities */
+.text-mask {
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+/* Elegant image zoom-hover container */
+.img-zoom-container {
+overflow: hidden;
+}
+.img-zoom-container img {
+transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-zoom-container:hover img {
+transform: scale(1.06);
+}
+
+/* Luxury Button System */
+.btn-luxury-primary {
+position: relative;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 0.6rem;
+background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 100%);
+color: #0B0B0E !important;
+font-weight: 700;
+font-size: 11px;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+padding: 1rem 2rem;
+border: 1px solid rgba(255, 255, 255, 0.9);
+box-shadow: 0 4px 25px rgba(255, 255, 255, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.2);
+overflow: hidden;
+transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+cursor: pointer;
+text-decoration: none;
+border-radius: 2px;
+}
+
+.btn-luxury-primary::before {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+transition: all 0.6s ease;
+}
+
+.btn-luxury-primary:hover {
+transform: translateY(-3px) scale(1.03);
+background: #FFFFFF;
+box-shadow: 0 10px 35px rgba(255, 255, 255, 0.45), 0 0 25px rgba(255, 255, 255, 0.3);
+color: #000000 !important;
+}
+
+.btn-luxury-primary:hover::before {
+left: 100%;
+}
+
+.btn-luxury-primary:active {
+transform: translateY(0) scale(0.98);
+}
+
+/* Luxury Secondary / Outlined Glass Button */
+.btn-luxury-secondary {
+position: relative;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 0.6rem;
+background: rgba(255, 255, 255, 0.05);
+color: #FFFFFF !important;
+font-weight: 600;
+font-size: 11px;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+padding: 1rem 2rem;
+border: 1px solid rgba(255, 255, 255, 0.35);
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+overflow: hidden;
+transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+cursor: pointer;
+text-decoration: none;
+border-radius: 2px;
+}
+
+.btn-luxury-secondary::before {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+transition: all 0.6s ease;
+}
+
+.btn-luxury-secondary:hover {
+transform: translateY(-3px) scale(1.03);
+background: rgba(255, 255, 255, 0.18);
+border-color: #FFFFFF;
+box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
+color: #FFFFFF !important;
+}
+
+.btn-luxury-secondary:hover::before {
+left: 100%;
+}
+
+.btn-luxury-secondary:active {
+transform: translateY(0) scale(0.98);
+}
+
+/* Luxury Floating WhatsApp Button */
+.btn-luxury-float {
+position: fixed;
+bottom: 2rem;
+right: 2rem;
+z-index: 100;
+width: 3.75rem;
+height: 3.75rem;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 9999px;
+background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 100%);
+color: #0B0B0E !important;
+border: 1px solid rgba(255, 255, 255, 0.9);
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 255, 255, 0.3);
+transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+text-decoration: none;
+}
+
+.btn-luxury-float:hover {
+transform: scale(1.12) translateY(-3px);
+background: #FFFFFF;
+box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6), 0 0 35px rgba(255, 255, 255, 0.5);
+color: #000000 !important;
+}
+
+/* Carousel Scroll Utilities */
+.no-scrollbar::-webkit-scrollbar {
+display: none;
+}
+.no-scrollbar {
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+.carousel-card {
+scroll-snap-align: start;
+}
+
+
+
+/* FAQ Accordion */
+details > summary::-webkit-details-marker {
+    display: none;
+}
